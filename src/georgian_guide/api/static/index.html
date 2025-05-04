@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georgian Guide AI Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Georgian Guide AI Assistant</h1>
+            <p>Your personal guide to exploring Georgia 🇬🇪</p>
+        </header>
+
+        <main>
+            <div class="query-form">
+                <h2>Ask anything about Georgia</h2>
+                <form id="queryForm">
+                    <div class="form-group">
+                        <label for="query">What would you like to know?</label>
+                        <textarea id="query" rows="3" placeholder="For example: 'I'm a 22 y.o. guy in Tbilisi, Rustaveli and I want to eat khinkali'"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="submitBtn">Get Recommendations</button>
+                        <div class="loader" id="loader"></div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="examples">
+                <h3>Try these examples:</h3>
+                <div class="example-buttons">
+                    <button class="example-btn" data-query="I'm in Tbilisi for 3 days. What should I visit?">Tbilisi in 3 days</button>
+                    <button class="example-btn" data-query="Where can I find good khinkali in Old Tbilisi?">Khinkali in Old Tbilisi</button>
+                    <button class="example-btn" data-query="How do I get from Tbilisi to Kazbegi?">Tbilisi to Kazbegi</button>
+                    <button class="example-btn" data-query="What are the must-try Georgian wines?">Georgian wines</button>
+                    <button class="example-btn" data-query="Show me the best parks to walk with my dog in Tbilisi">Dog parks</button>
+                </div>
+            </div>
+
+            <div class="response-container" id="responseContainer">
+                <div class="response-header">
+                    <h2>Response</h2>
+                </div>
+                <div class="response-content" id="responseContent"></div>
+                <div class="follow-up" id="followUpContainer">
+                    <h3>Follow-up questions:</h3>
+                    <ul id="followUpList"></ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Georgian Guide AI Assistant &copy; 2023</p>
+            <p>Powered by OpenAI and Google Maps</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html> 
